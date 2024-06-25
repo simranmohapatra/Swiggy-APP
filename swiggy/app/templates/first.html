@@ -1,0 +1,28 @@
+{% extends "common.html" %}
+{% block "xxx" %}
+
+<body>
+    <h1><center>this is my first page</center></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis earum explicabo aut, ab fugit ipsum a reprehenderit ut debitis libero quod quidem, deleniti aliquid beatae non, dicta similique odit quia?</p>
+    <br>
+    <br>
+    {{l}}
+
+    <h1><center>this is table</center></h1>
+    <table>
+        <tr>
+            <th>sl no.</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        {% for i in l %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button><a href="second">second</a></button>
+</body>
+{% endblock  %}

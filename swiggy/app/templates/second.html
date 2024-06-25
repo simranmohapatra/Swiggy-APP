@@ -1,0 +1,43 @@
+{% extends "common.html" %}
+{% block "xxx" %}
+<body>
+    <h1><center>this is my second page</center></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ratione enim, distinctio reprehenderit nisi quaerat iste velit laborum officia excepturi molestiae voluptas harum error, quibusdam mollitia quia voluptatem aperiam culpa.</p>
+    <button><a href="/">first</a></button>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        name<input type="text" name="name">
+        <br><br>
+        age<input type="number" name="age">
+        <br><br>
+        gender<input type="text" name="gender">
+        <br><br>
+        <button>submit</button>
+
+    </form>
+    <table border="3px solid black">
+        <thead>
+            <tr>SLNO</tr>
+            <tr>NAME</tr>
+            <tr>AGE</tr>
+            <tr>GENDER</tr>
+        </thead>
+        <tbody>
+            {% for s in value %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.age}}</td>
+                <td>{{s.gender}}</td>
+                <td><a href="/delete/{{s.id}}">Delete</a></td>
+                <td><a href="/update/{{s.id}}">Update</a></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+</body>
+{% endblock  %}

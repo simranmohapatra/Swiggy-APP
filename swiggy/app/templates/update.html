@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update page</title>
+</head>
+<body>
+    <h1>update your details here</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam omnis, blanditiis esse soluta necessitatibus maxime odit commodi sint dolores vitae! Dolorum quo dolor ipsa cumque amet aliquam recusandae, earum itaque?</p>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        name<input type="text" name="name">
+        <br><br>
+        age<input type="number" name="age">
+        <br><br>
+        gender<input type="text" name="gender">
+        <br><br>
+        <button>submit</button>
+
+    </form>
+    
+
+</body>
+</html>
